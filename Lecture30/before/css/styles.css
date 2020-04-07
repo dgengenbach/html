@@ -18,3 +18,54 @@ body {
 .navbar-brand{
   padding-top: 20px;
 }
+.navbar-brand a:hover, .navbar-brand a:focus{
+  text-decoration: none;
+}
+#nav-list{
+  margin-top: 10px
+}
+#nav-list a{
+  color: #ff7d00;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #c1c1c1;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+#phone {
+  margin-top: 5px;
+}
+#phone a { /*phone number*/
+  text-align: right;
+  padding-bottom: 0;
+}
+#phone div {
+  color: #ff4d00;
+  text-align: right;
+  padding-right: 15px;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+  border: 1px solid #ff7d00;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* Large */
+@media(min-width: 1200px) {
+
+}
+/* Medium */
+@media(min-width: 992px) and (max-width: 1199px) {
+
+}
+/* Small */
+@media(min-width: 768px) and (max-width: 991px) {
+
+}
+/* Ex Small */
+@media(max-width: 767px) {
+
+}
