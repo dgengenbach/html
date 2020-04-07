@@ -1,0 +1,15 @@
+<div class="form-group" ng-class="{'has-error': $parent.form.inputEmail.$invalid}">
+  <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+  <div class="col-sm-9">
+    <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" ng-model="email.emailAddress">
+    <span class="help-block">Email is the primary means of communication to keep you in the loop about our news and offers.</span>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-3 col-sm-2">
+    <button type="button" ng-click="validateEmail()" class="btn btn-default" ng-disabled="!email || $parent.form.inputEmail.$invalid">Validate Email</button>
+  </div>
+  <div class="col-sm-7" ng-show="email.validationStatus">
+    <div class="alert" ng-class="email.validationStyle" role="alert" style="padding-top:8px; padding-bottom:8px;">{{email.validationStatus}}</div>
+  </div>
+</div>

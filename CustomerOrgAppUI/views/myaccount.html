@@ -1,0 +1,107 @@
+<button type="button" class="btn btn-default pull-right" ng-click="MyAcc.isDisabled = false">Edit</button> <h2>Welcome {{MyAcc.User.firstName + ' ' + MyAcc.User.lastName}}</h2> <div class="well"> <form class="form-horizontal" name="form" ng-submit="MyAcc.save()"> <fieldset ng-disabled="MyAcc.isDisabled"> <legend>Your personal info</legend> <div class="form-group"> <label for="inputTitle" class="col-sm-3 control-label">Title</label> <div class="col-sm-9"> <select class="form-control" id="inputTitle" ng-model="MyAcc.User.prefix"> <!--<option> </option>--> <option>Mr <option>Mrs </select> </div> </div> <div class="form-group"> <label for="inputName" class="col-sm-3 control-label">Name</label> <div class="col-sm-9"> <div class="row"> <div class="col-sm-4"> <input type="text" class="form-control" name="inputFirstName" id="inputFirstName" placeholder="First name" ng-model="MyAcc.User.firstName"> </div> <div class="col-sm-4"> <input type="text" class="form-control" name="inputMiddleName" id="inputMiddleName" placeholder="Middle name" ng-model="MyAcc.User.middleName"> </div> <div class="col-sm-4"> <input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="Last name" ng-model="MyAcc.User.lastName"> </div> </div> </div> </div> <div class="form-group"> <label for="inputSuffix" class="col-sm-3 control-label">Suffix</label> <div class="col-sm-9"> <select class="form-control" id="inputSuffix" ng-model="MyAcc.User.suffix"> <!--            <option> </option>--> <option>Jr <option>Sr </select> </div> </div> <div class="form-group"> <label for="inputGender" class="col-sm-3 control-label">Gender</label> <div class="col-sm-9"> <select class="form-control" id="inputGender" ng-model="MyAcc.User.gender"> <!--<option> </option>--> <option value="M">Male <option value="F">Female </select> </div> </div> <div class="form-group"> <label for="inputDoB" class="col-sm-3 control-label">Date of birth</label> <div class="col-sm-9"> <input type="date" class="form-control" id="inputDateOfBirth" placeholder="" ng-model="MyAcc.User.dateOfBirth" format-date> </div> </div> </fieldset> <!-- Contacts --> <fieldset ng-disabled="MyAcc.isDisabled"> <legend>Contact info</legend> <div infa-email email="MyAcc.User.email"></div> <!-- <div class="form-group">
+        <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="MyAcc.User.email">
+          <span class="help-block">Email is the primary means of communication to keep you in the loop about our news and offers.</span>
+        </div>
+      </div>--> <div class="row"> <div class="col-sm-offset-3 col-sm-9"> <hr> </div> </div> <div infa-address address="MyAcc.User.addresses[0]"></div> <!--
+       <div class="form-group">
+        <label for="inputAddressType" class="col-sm-3 control-label">Address Type</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="inputAddressType" ng-model="MyAcc.User.addresses[0].addressType">
+
+            <option value="HOME">Home</option>
+            <option value="BUS">Business</option>
+          </select>
+        </div>
+      </div>
+       <div class="form-group">
+        <label for="inputAddressLine1" class="col-sm-3 control-label">Address Line 1</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputAddressLine1" placeholder="" ng-model="MyAcc.User.addresses[0].addressLine1">
+          <span class="help-block">Street address, P.O. box, company name, c/o.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddressLine2" class="col-sm-3 control-label">Address Line 2</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputAddressLine2" placeholder="" ng-model="MyAcc.User.addresses[0].addressLine2">
+          <span class="help-block">Apartment, suite, unit, building, floor, etc.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCity" class="col-sm-3 control-label">City</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputCity" placeholder="City" ng-model="MyAcc.User.addresses[0].city">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputState" class="col-sm-3 control-label">State/Province/Region</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputState" placeholder="" ng-model="MyAcc.User.addresses[0].state">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPostalCode" class="col-sm-3 control-label">ZIP/Postal Code</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputPostalCode" placeholder="ZIP/Postal Code" ng-model="MyAcc.User.addresses[0].postalCd">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCountry" class="col-sm-3 control-label">Country</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="inputCountry" ng-model="MyAcc.User.addresses[0].country">
+
+            <option value="CAN">Canada</option>
+            <option value="USA">United States</option>
+          </select>
+        </div>
+      </div>
+      --> <div class="row"> <div class="col-sm-offset-3 col-sm-9"> <hr> </div> </div> <div infa-phones="MyAcc.User.phones"></div> <!--
+      <div class="form-group" ng-repeat="phone in MyAcc.User.phones">
+        <label for="inputPhoneNumber" class="col-sm-3 control-label">Phone Number</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="" ng-model="phone.phoneNumber">
+            </div>
+            <div class="col-sm-4">
+              <select class="form-control" id="inputPhoneType" ng-model="phone.phoneType">
+                <option>Mobile</option>
+                <option>Home</option>
+                <option>Work</option>
+              </select>
+            </div>
+            <!--<button type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+              <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div> --> </fieldset> <!-- /Contacts --> <!-- Password --> <fieldset ng-disabled="MyAcc.isDisabled"> <legend>Set up your Password</legend> <div class="form-group"> <label for="inputPassword3" class="col-sm-3 control-label">Password</label> <div class="col-sm-9"> <input ng-model="MyAcc.User.password" type="password" class="form-control" id="inputPassword3" placeholder="Password"> </div> </div> <div class="form-group"> <label for="inputPassword3" class="col-sm-3 control-label">Repeat Password</label> <div class="col-sm-9"> <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> </div> </div> <!--   <div class="form-group">
+        <label for="inputSecretQuestion" class="col-sm-3 control-label">Secret Question</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="inputSuffix">
+            <option value="">Choose a question...</option>
+            <option value="Holiday">What was your best-ever holiday?</option>
+            <option value="Song">What is your all-time favourite song?</option>
+            <option value="Restaurant">What restaurant would you never go back to?</option>
+            <option value="Cousin">What is the name of your oldest cousin?</option>
+            <option value="Country">What country fascinates you most?</option>
+            <option value="Teacher">Who is the nicest teacher you ever had?</option>
+            <option value="OTHER">Compose your own question</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAnswer" class="col-sm-3 control-label">Answer</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputAnswer" placeholder="">
+        </div>
+      </div>--> </fieldset> <!-- /Password --> <!--<div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> I accespt the <a href="">Terms</a>
+          </label>
+        </div>
+      </div>
+    </div>--> <div class="form-group"> <div class="col-sm-offset-3 col-sm-9"> <button type="submit" class="btn btn-primary" ng-disabled="MyAcc.isDisabled">Save</button> </div> </div> </form> </div>

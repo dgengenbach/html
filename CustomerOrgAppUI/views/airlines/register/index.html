@@ -1,0 +1,175 @@
+<div ng-include src="'views/airlines/_templates/_header.html'"></div>
+
+ <div class="well">
+  <form class="form-horizontal" name="form" ng-submit="registerCtrl.reg()">
+    <fieldset>
+      <legend>Your company info</legend>
+     
+      <div class="form-group">
+        <label for="inputName" class="col-sm-3 control-label">Name</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="inputFullName" id="inputFullName" placeholder="Company legal name" ng-model="registerCtrl.party.fullName">
+              <input type="text"  style="display:none" name="inputCustomerTierCd" id="inputCustomerTierCd" ng-model="registerCtrl.party.customerTierCd" ng-init="registerCtrl.party.customerTierCd='Silver';">            
+              <input type="text"  style="display:none"   name="inputActivityStatusCd" id="inputActivityStatusCd"  ng-model="registerCtrl.party.activityStatusCd" ng-value="registerCtrl.party.activityStatusCd='Active';"> 
+            </div>   
+          </div>
+        </div>
+      </div>
+      
+     
+
+    </fieldset>
+    <!-- Contacts -->
+    <fieldset>
+      <legend>Contact info</legend>
+
+      <div infa-email email="registerCtrl.party.email" template-URL="views/airlines/_templates/infaemail.html"></div>
+
+
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-9">
+          <hr>
+        </div>
+      </div>
+      <div infa-address address="registerCtrl.party.address" template-url="views/airlines/_templates/infaaddress.html"></div>
+
+
+      
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-9">
+          <hr>
+        </div>
+      </div>
+
+      <div infa-phones="registerCtrl.party.phones" template-url="views/airlines/_templates/infaphones.html"></div>
+
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Set up your Password</legend>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-9">
+          <input ng-model="registerCtrl.party.password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label">Repeat Password</label>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+      <!--  <div class="form-group">
+        <label for="inputSecretQuestion" class="col-sm-3 control-label">Secret Question</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="inputSuffix">
+            <option value="">Choose a question...</option>
+            <option value="Holiday">What was your best-ever holiday?</option>
+            <option value="Song">What is your all-time favourite song?</option>
+            <option value="Restaurant">What restaurant would you never go back to?</option>
+            <option value="Cousin">What is the name of your oldest cousin?</option>
+            <option value="Country">What country fascinates you most?</option>
+            <option value="Teacher">Who is the nicest teacher you ever had?</option>
+            <option value="OTHER">Compose your own question</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAnswer" class="col-sm-3 control-label">Answer</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="inputAnswer" placeholder="">
+        </div>
+      </div>-->
+    </fieldset>
+    <!-- /Password -->
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"  checked="true" required="required" id="loyaltyCheckBox" ng-false-value="" ng-true-value="1" ng-model="registerCtrl.policy[0]"> I accept the <a href="">programme privacy statement</a> and grant the Company the usage of the data to send information about the programme.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="advCheckBox" ng-true-value="4" ng-false-value="" ng-model="registerCtrl.policy[1]">I consent to receive offers and advertisements from the Company. Please read the <a href="">advertising privacy statement</a>.
+          </label>
+        </div>
+        
+         <div class="checkbox">
+          <label>
+            <input type="checkbox"   id="procCheckBox" ng-true-value="80001" ng-false-value="" ng-model="registerCtrl.policy[3]">Yes, I consent the Company to use my data for analytical and statistical usage.
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- PopUP -->
+<div id="popup" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(236, 239, 240, 0.8) none repeat scroll 0% 0%;
+    z-index: 1000;
+    /* vertical-align: middle; */" ng-show="registerCtrl.showPopup">
+  <div style="
+    vertical-align: middle;
+    position: absolute;
+    height: 150px;
+    margin-top: -75px;
+    width: 400px;
+    margin-left: -300px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;">
+    <h3 style="margin-top: 0px;"> {{ registerCtrl.messageHead }}</h3>
+    <p>{{ registerCtrl.messageBody }}</p>
+     <button type="button" class="btn btn-primary" style="width:100%" ng-click="registerCtrl.ok()">
+      <div>OK</div>
+    </button>
+
+  </div>
+</div>
+<!-- /PopUP -->
+<!-- Loading -->
+<div id="loading" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(236, 239, 240, 0.8) none repeat scroll 0% 0%;
+    z-index: 1000;
+    /* vertical-align: middle; */" ng-show="registerCtrl.showLoading">
+  <div style="
+    vertical-align: middle;
+    position: absolute;
+    height: 150px;
+    margin-top: -75px;
+    width: 400px;
+    margin-left: -300px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;">
+    <h4 style="margin-top: 0px;">Registering your account</h4>
+    <div style="background-color: blue;  height: 5px; width:{{registerCtrl.progress}}%; margin-left:10px; margin-right:10px;"></div>
+
+  </div>
+</div>
+<!-- /Loading -->
+<div ng-include src="'views/airlines/_templates/_footer.html'"></div>

@@ -1,0 +1,28 @@
+<div ng-include src="'views/airlines/_templates/_header.html'"></div>
+ <div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form class="form-signin" ng-submit="loginCtrl.login()">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" data-cip-id="inputEmail" autocomplete="off" ng-model="loginCtrl.username">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" data-cip-id="inputPassword" ng-model="loginCtrl.password">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>
+<div class="row" style="margin-top: 10px;" ng-show="loginCtrl.error">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+      </button>
+      {{loginCtrl.error}}
+    </div>
+  </div>
+</div>
+<div ng-include src="'views/airlines/_templates/_footer.html'"></div>
