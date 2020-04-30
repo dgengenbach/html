@@ -15,7 +15,7 @@
     <table  style="border: 1px solid #ccc; box-shadow: 0 0 4px #ccc;"  align="center" cellpadding="14" cellspacing="0" width="650">
         <tr>
             <td>
-                <img width="100%" height="100%" src="images/HEADER_logos_.png" alt="Informatica Header Logo" />
+                <img width="100%" height="100%" src="http://localhost/Custom/images/portal_header_jj.png" alt="Informatica Header Logo" />
             </td>
         </tr>
 		<table width="625" align="center">
@@ -23,7 +23,7 @@
             <td style="font-family: Calibri, Helvetica, sans-sherif;">
                 <p>Dear Valued Supplier,</p>
 <p>We continuously improve our business processes to enhance our service and to reduce time to market.</p>
-<p>To improve our supplier relationship processes, we are pleased to introduce the new [buyer_organization_name] Supplier Portal. The Supplier Portal streamlines some of our supplier relationship business processes and enables you to manage your own supplier profile and documents.</p>
+<p>To improve our supplier relationship processes, we are pleased to introduce the new Johnson &amp; Johnson Supplier Portal. The Supplier Portal streamlines some of our supplier relationship business processes and enables you to manage your own supplier profile and documents.</p>
 <p>We invite you to register as a supplier on the [buyer_organization_name] Supplier Portal.</p>
 <p>To register, click the following link:</p>
 <p><a target="_blank" href="${portalUrl}">${portalUrl}</a></p>
@@ -39,24 +39,24 @@
 <p>If you have any questions, you can contact us by telephone or email:</p>
 <ul>
     <li>
-        <strong>Telephone</strong>: [organization_telephone_number_and_business_hours]
+        <strong>Telephone</strong>: (650) 385-5000  8:00A-5:00P PT
     </li>
     <li>
-        <strong>Email</strong>: [organization_email]
+        <strong>Email</strong>: supplier.management@jnj.com
     </li>
 </ul>
 <p>Regards,</p>
 <p>Supplier Onboarding Team</p>
-<p>[organization_name]</p>
-<p>[organization_address]</p>
-<p>[organization_website]</p>
+<p>Johnson &amp; Johnson</p>
+<p>1 Johnson And Johnson Plaza, New Brunswick NJ 08933</p>
+<p>http://www.jnj.com</p>
             </td>
         </tr>
 		</table>
 		<table width="625" cellpadding="32" align = "center" height = "90">
         <tr style="background-color: #D9D9D9;" >
             <td align="center">
-			    <table style="color: #ffffff; font-size: 14px" cellpadding="2" cellspacing="0" > 
+			    <table style="color: #ffffff; font-size: 14px" cellpadding="2" cellspacing="0" >
                     <tr>
                         <td>
                             <span style = "color: #3C363F ;font-family: Roboto-Light,Sans-serif; font-size: 14px;text-align: right;letter-spacing: -0.08px">Powered by</span>
@@ -65,7 +65,7 @@
                            <span style = "font-family: Roboto-Regular,Sans-serif;font-size:14px;color:#FF6500;letter-spacing: -0.08px;text-align:center;"> Informatica </span>
                         </td>
                     </tr>
-				</table>	
+				</table>
             </td>
         </tr>
 		</table>

@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?><contour xmlns="http://www.informatica.com/mdm/C360WidgetConfiguration">
+    <!-- Meta-data about specific solution -->
+  <meta>
+    <applicationVersion>10.3</applicationVersion>
+  </meta>
+  <showEntitySepcificIcons>false</showEntitySepcificIcons>
+  <!-- UI components configuration -->
+  <components>
+    <daascomponent>
+      <importPopupMessageEnabled>true</importPopupMessageEnabled>
+    </daascomponent>
+    <!-- MyRecords Manager UI configuration -->
+    <myRecordsManager>
+      <draftTaskType>AVOSBeDraftState</draftTaskType>
+      <!-- Tasktypes as configured in Tasks in CO CS Config -->
+      <taskTypes>
+        <taskType name="AVOSBeDraftState">
+          <role name="SalesOperationAnalyst">
+            <enableAssignTo>false</enableAssignTo>
+            <!-- Action of task as configured in BPR(ActiveVOS Workflow) -->
+            <actions>
+              <action name="Submit">
+                <enableCommentOnAction>false</enableCommentOnAction>
+              </action>
+              <action name="Discard">
+                <enableCommentOnAction>true</enableCommentOnAction>
+                <isCommentMandatory>false</isCommentMandatory>
+                <actionMessage>
+                                    <![CDATA[If you discard the record, the record will be deleted.]]>
+                                </actionMessage>
+              </action>
+            </actions>
+          </role>
+          <role name="HealthcareUser">
+            <enableAssignTo>false</enableAssignTo>
+            <!-- Action of task as configured in BPR(ActiveVOS Workflow) -->
+            <actions>
+              <action name="Submit">
+                <enableCommentOnAction>false</enableCommentOnAction>
+              </action>
+              <action name="Discard">
+                <enableCommentOnAction>true</enableCommentOnAction>
+                <isCommentMandatory>false</isCommentMandatory>
+                <actionMessage>
+                                    <![CDATA[If you discard the record, the record will be deleted.]]>
+                                </actionMessage>
+              </action>
+            </actions>
+          </role>
+        </taskType>
+      </taskTypes>
+    </myRecordsManager>
+    <!-- DAAS provider configuration for match data profile and score details -->
+    <daasProviders>
+            <!-- DAAS provider configuration for particular provider -->
+      <daasProvider name="D&amp;B">
+        <dataPackets>
+          <dataPacket>Detailed Company Profile</dataPacket>
+          <dataPacket>Corporate Hierarchy</dataPacket>
+        </dataPackets>
+        <matchGradeValues>
+          <matchGrade>
+            <value>A</value>
+            <description>Content is the same</description>
+          </matchGrade>
+          <matchGrade>
+            <value>B</value>
+            <description>Content is similar</description>
+          </matchGrade>
+          <matchGrade>
+            <value>F</value>
+            <description>Content is different</description>
+          </matchGrade>
+          <matchGrade>
+            <value>Z</value>
+            <description>One or both components are blank</description>
+          </matchGrade>
+        </matchGradeValues>
+        <matchGradeDetail>
+          <gradeDetail label="Company Name" name="Name">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches primary name</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered name</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches tradestyle</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches CEO name</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>04</score>
+              <text>Matches additional executive</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>05</score>
+              <text>Matches former Business Name</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>06</score>
+              <text>Matches former tradestyle</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>07</score>
+              <text>Matches former CEO</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>08</score>
+              <text>Matches former executive</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>09</score>
+              <text>Matches short name</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>11</score>
+              <text>Matches brand</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Primary Name - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="Street number" name="Street Number">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="Street" name="Street Name">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="City" name="City">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="US = State; Canada = Province; Other = Country" name="State">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="US = State; Canada = Province; Other = Country" name="Province">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="US = State; Canada = Province; Other = Country" name="Country">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former physical address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches additional (EHA/DDM) address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Physical Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="Mail Address/PO Box" name="PO Box">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matches EHA/DDM mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Mail Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="Mail Address/PO Box" name="Mail Address">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>03</score>
+              <text>Matched EHA/DDM mail address</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Mail Address - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="Telephone" name="Phone">
+            <scoreDetail>
+              <score>00</score>
+              <text>Matches current phone</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>01</score>
+              <text>Matches registered phone</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>02</score>
+              <text>Matches former phone</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>98</score>
+              <text>Current Phone - not available</text>
+            </scoreDetail>
+            <scoreDetail>
+              <score>99</score>
+              <text>Your input - not available</text>
+            </scoreDetail>
+          </gradeDetail>
+          <gradeDetail label="ZIP" name="Postal Code"/>
+          <gradeDetail label="Density" name="Density"/>
+          <gradeDetail label="Uniqueness" name="Uniqueness"/>
+          <gradeDetail label="Industry" name="Sic"/>
+        </matchGradeDetail>
+      </daasProvider>
+    </daasProviders>
+    <!-- Bulk Import Templates -->
+    <bulkImport>
+      <templates>
+        <template name="CustomerPersonView"/>
+        <template name="CustomerOrgView"/>
+        <template name="ProductView"/>
+        <template name="CustomerPersonViewSimple"/>
+      </templates>
+    </bulkImport>
+    <!-- Dataview configuration properties -->
+    <dataView>
+      <draft>
+        <draftCoName>draftInd</draftCoName>
+        <!-- CO name of the draft fieldl which is to be rendered -->
+        <draftDefault>true</draftDefault>
+        <!-- Default value of the field -->
+            </draft>
+    </dataView>
+  </components>
+  <!-- Widget configuration for External Links etc. -->
+  <widgets>
+    <social>
+      <Facebook>http://www.facebook.com</Facebook>
+      <Twitter>http://www.twitter.com</Twitter>
+      <Linkedin>http://www.linkedin.com</Linkedin>
+      <Pinterest>http://www.pinterrest.com</Pinterest>
+      <Snapchat>http://www.snapchat.com</Snapchat>
+    </social>
+    <b2b>
+      <overview>
+        <title>Overview</title>
+        <section>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>img</type>
+            <coValue>imgUrl</coValue>
+            <defaultValue/>
+            <filterAs/>
+          </field>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>textWithIcon</type>
+            <coValue>status_prtyRleStsValDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Business Name</label>
+            <type>text</type>
+            <coValue>fullNm</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Former Name</label>
+            <type>text</type>
+            <coValue>CustomerOrgAlternateNames</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getOne_altNmTyp_nmTyp[Former Business Name]</getStrategy>
+            <coFieldValues>altNm</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Company Type</label>
+            <type>text</type>
+            <coValue>cmpnyTyp_cmpnyTypDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Total Employees</label>
+            <type>text</type>
+            <coValue>numOfEmp</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Social</label>
+            <type>social</type>
+            <coValue>CustomerOrgSocialHandle</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>sclMdaVal_sclMdaTyp_sclMediaDesc</coFieldValues>
+            <concatenateWith><![CDATA[&]]></concatenateWith>
+            <getStrategy>all</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field group="true" view="horizontal">
+            <field>
+              <label>Phone</label>
+              <type>phone</type>
+              <coValue>CustomerOrgPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Telephone]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Mobile</label>
+              <type>phone</type>
+              <coValue>CustomerOrgPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Cell]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Email</label>
+              <type>email</type>
+              <coValue>CustomerOrgElectronicAddress</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>etrncAddr</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_etrncAddrTyp_addrTyp[Email]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Website</label>
+              <type>link</type>
+              <coValue>CustomerOrgElectronicAddress</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>etrncAddr</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_etrncAddrTyp_addrTyp[Web Address]</getStrategy>
+              <filterAs/>
+            </field>
+          </field>
+          <field>
+            <label>Address</label>
+            <type>addressFmt</type>
+            <coValue>CustomerOrgPostalAddress</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>PostalAddress_addrLn1_addrLn2_addrLn3_addrLn4_addrLn5_county_city_pstlCd_state_cntryCd_cntryDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[, ]]>
+                        </concatenateWith>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+      </overview>
+      <financal>
+        <title>Financials</title>
+        <section>
+          <field>
+            <label>Annual Revenue</label>
+            <type>currency</type>
+            <coValue>CustomerOrgFinancials</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getOne_finInfoType_finInfoTyp[Annual Revenue]</getStrategy>
+            <coFieldValues>amnt_crncy_crncyCd_unt_untDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Total Equity</label>
+            <type>currency</type>
+            <coValue>CustomerOrgFinancials</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getOne_finInfoType_finInfoTyp[Total Equity]</getStrategy>
+            <coFieldValues>amnt_crncy_crncyCd_unt_untDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </financal>
+      <identifiers>
+        <title>DUNS</title>
+        <section>
+          <field>
+            <label>DUNS</label>
+            <type>text</type>
+            <coValue>CustomerOrgIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[DUNS]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>ParentDUNS</label>
+            <type>text</type>
+            <coValue>CustomerOrgIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[ParentDUNS]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>NAICS</label>
+            <type>text</type>
+            <coValue>CustomerOrgClassification</coValue>
+            <coFieldValues>Classification_classifVal</coFieldValues>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_Classification_classifTyp_classifTyp[NAICS]</getStrategy>
+            <defaultValue>-</defaultValue>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>SIC</label>
+            <type>text</type>
+            <coValue>CustomerOrgClassification</coValue>
+            <coFieldValues>Classification_classifVal</coFieldValues>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_Classification_classifTyp_classifTyp[SIC]</getStrategy>
+            <defaultValue>-</defaultValue>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </identifiers>
+      <indicators>
+        <title>Indicators</title>
+        <section>
+          <field>
+            <label>
+                            <![CDATA[ ]]>
+                        </label>
+            <type>textWithIcon</type>
+            <coValue>CustomerOrgIndicators</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>indTyp.custIndTyp</defaultKey>
+            <defaultKeyValue>Small Business</defaultKeyValue>
+            <getStrategy>getOne_indTyp_custIndTyp[Small Business]</getStrategy>
+            <coFieldValues>indVal_indTyp_custIndTyp_custIndDesc</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>
+                            <![CDATA[ ]]>
+                        </label>
+            <type>textWithIcon</type>
+            <coValue>CustomerOrgIndicators</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>indTyp.custIndTyp</defaultKey>
+            <defaultKeyValue>Key Opinion Leader</defaultKeyValue>
+            <getStrategy>getOne_indTyp_custIndTyp[Key Opinion Leader]</getStrategy>
+            <coFieldValues>indVal_indTyp_custIndTyp_custIndDesc</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </indicators>
+      <twitter>
+        <numberOfTweets>5</numberOfTweets>
+        <section>
+          <field>
+            <label>Twitter</label>
+            <type>social</type>
+            <coValue>CustomerOrgSocialHandle</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>sclMdaVal</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <getStrategy>getOne_sclMdaTyp_sclMediaTyp[Twitter]</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+      </twitter>
+      <contacts>
+        <address>
+          <coValue>CustomerOrgPostalAddress</coValue>
+        </address>
+        <phone>
+          <coValue>CustomerOrgPhone</coValue>
+        </phone>
+        <email>
+          <coValue>CustomerOrgElectronicAddress</coValue>
+        </email>
+      </contacts>
+      <keyExecutives>
+        <coValue>CustomerOrgKeyExecutives</coValue>
+      </keyExecutives>
+    </b2b>
+    <b2c>
+      <overview>
+        <title>Overview</title>
+        <section>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>img</type>
+            <coValue>imgUrl</coValue>
+            <defaultValue/>
+            <filterAs/>
+          </field>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>textWithIcon</type>
+            <coValue>status_prtyRleStsValDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Full Name</label>
+            <type>text</type>
+            <coValue>fullNm</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Job Title</label>
+            <coValue>CustomerPersonProfessionalDetails</coValue>
+            <coFieldValues>dsgntn</coFieldValues>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Organization</label>
+            <type>text</type>
+            <coValue>CustomerPersonProfessionalDetails</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>emplyrNm</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Gender</label>
+            <type>text</type>
+            <coValue>gndrCd_gndrDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Birthdate</label>
+            <type>date</type>
+            <coValue>brthDt</coValue>
+            <defaultValue>-</defaultValue>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Social</label>
+            <type>social</type>
+            <coValue>CustomerPersonSocialHandle</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>sclMdaVal_sclMdaTyp_sclMediaDesc</coFieldValues>
+            <concatenateWith><![CDATA[&]]></concatenateWith>
+            <getStrategy>all</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field group="true" view="horizontal">
+            <field>
+              <label>Phone</label>
+              <type>phone</type>
+              <coValue>CustomerPersonPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Telephone]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Mobile</label>
+              <type>phone</type>
+              <coValue>CustomerPersonPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Cell]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Email</label>
+              <type>email</type>
+              <coValue>CustomerPersonElectronicAddress</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>etrncAddr</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>defaultOrFirstOne</getStrategy>
+              <filterAs/>
+            </field>
+          </field>
+          <field>
+            <label>Address</label>
+            <type>addressFmt</type>
+            <coValue>CustomerPersonPostalAddr</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>PostalAddress_addrLn1_city_state_pstlCd_cntryCd_cntryDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[, ]]>
+                        </concatenateWith>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+      </overview>
+      <overviewHealth>
+        <title>HCP Overview</title>
+        <section>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>img</type>
+            <coValue>imgUrl</coValue>
+            <defaultValue/>
+            <filterAs/>
+          </field>
+          <field>
+            <label><![CDATA[ ]]></label>
+            <type>textWithIcon</type>
+            <coValue>status_prtyRleStsValDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Full Name</label>
+            <type>text</type>
+            <coValue>fullNm</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Primary Specialization</label>
+            <type>text</type>
+            <coValue>CustomerPersonSpecialization</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>spcltyTyp</defaultKey>
+            <defaultKeyValue>Primary</defaultKeyValue>
+            <coFieldValues>spcltyCd_spcltyCdDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Credentials</label>
+            <type>text</type>
+            <coValue>dsgntn</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Gender</label>
+            <type>text</type>
+            <coValue>gndrCd_gndrDesc</coValue>
+            <defaultValue>-</defaultValue>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Date of Birth</label>
+            <type>date</type>
+            <coValue>brthDt</coValue>
+            <defaultValue>-</defaultValue>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+          <field>
+            <label>Address</label>
+            <type>addressFmt</type>
+            <coValue>CustomerPersonPostalAddr</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>PostalAddress_addrLn1_addrLn2_addrLn3_addrLn4_addrLn5_county_city_pstlCd_state_cntryCd_cntryDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[, ]]>
+                        </concatenateWith>
+            <getStrategy>defaultOrFirstOne</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field group="true" view="horizontal">
+            <field>
+              <label>Phone</label>
+              <type>phone</type>
+              <coValue>CustomerPersonPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Telephone]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Mobile</label>
+              <type>phone</type>
+              <coValue>CustomerPersonPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Cell]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Fax</label>
+              <type>phone</type>
+              <coValue>CustomerPersonPhone</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>prfxNum_phnNum_phnNumExt_dncInd</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>getOne_phnTyp_phnTyp[Fax]</getStrategy>
+              <filterAs/>
+            </field>
+            <field>
+              <label>Email</label>
+              <type>email</type>
+              <coValue>CustomerPersonElectronicAddress</coValue>
+              <defaultValue>-</defaultValue>
+              <defaultKey>dfltInd</defaultKey>
+              <defaultKeyValue>Y</defaultKeyValue>
+              <coFieldValues>etrncAddr</coFieldValues>
+              <concatenateWith>
+                                <![CDATA[ ]]>
+                            </concatenateWith>
+              <getStrategy>defaultOrFirstOne</getStrategy>
+              <filterAs/>
+            </field>
+          </field>
+          <field>
+            <label>NPI</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[NPI]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </overviewHealth>
+      <financal>
+        <title>Financials</title>
+        <section>
+          <field>
+            <label>Annual Income</label>
+            <type>currency</type>
+            <coValue>CustomerPersonFinancials</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getOne_finInfoType_finInfoTyp[Annual Income]</getStrategy>
+            <coFieldValues>amnt_crncy_crncyCd_unt_untDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Total Net Worth</label>
+            <type>currency</type>
+            <coValue>CustomerPersonFinancials</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getOne_finInfoType_finInfoTyp[Total Net Worth]</getStrategy>
+            <coFieldValues>amnt_crncy_crncyCd_unt_untDesc</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </financal>
+      <identifiers>
+        <title>Identifiers</title>
+        <section>
+          <field>
+            <label>SSN</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[SSN]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>TIN</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[TIN]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Drivers License</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[DL]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>Passport</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[Passport]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </identifiers>
+      <identifiersHealth>
+        <title>Identifiers</title>
+        <section>
+          <field>
+            <label>NPI</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[NPI]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>UPIN</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[UPIN]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>PIN</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[PIN]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>VEEVA</label>
+            <type>text</type>
+            <coValue>CustomerPersonIdentifiers</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <getStrategy>getByEffectiveStartDate[effStrtDt]_altIdTyp_idTyp[VEEVA]</getStrategy>
+            <coFieldValues>altIdVal</coFieldValues>
+            <concatenateWith>
+                            <![CDATA[ ]]>
+                        </concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </identifiersHealth>
+      <twitter>
+        <numberOfTweets>5</numberOfTweets>
+        <section>
+          <field>
+            <label>Twitter</label>
+            <type>social</type>
+            <coValue>CustomerPersonSocialHandle</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>dfltInd</defaultKey>
+            <defaultKeyValue>Y</defaultKeyValue>
+            <coFieldValues>sclMdaVal</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <getStrategy>getOne_sclMdaTyp_sclMediaTyp[Twitter]</getStrategy>
+            <filterAs/>
+          </field>
+        </section>
+      </twitter>
+      <indicators>
+        <title>Indicators</title>
+        <section>
+          <field>
+            <label>
+                            <![CDATA[ ]]>
+                        </label>
+            <type>textWithIcon</type>
+            <coValue>CustomerPersonLifestyleDetails</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>lfstylId.lfstylTyp</defaultKey>
+            <defaultKeyValue>Smoker</defaultKeyValue>
+            <getStrategy>getOne_lfstylId_lfstylTyp[Smoker]</getStrategy>
+            <coFieldValues>lfstylVal_lfstylId_lfstylTyp_lfstylTypDesc</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <filterAs/>
+          </field>
+          <field>
+            <label>
+                            <![CDATA[ ]]>
+                        </label>
+            <type>textWithIcon</type>
+            <coValue>CustomerPersonLifestyleDetails</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>lfstylId.lfstylTyp</defaultKey>
+            <defaultKeyValue>Rock music listener</defaultKeyValue>
+            <getStrategy>getOne_lfstylId_lfstylTyp[Rock music listener]</getStrategy>
+            <coFieldValues>lfstylVal_lfstylId_lfstylTyp_lfstylTypDesc</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+        <section>
+          <field>
+            <label>
+                            <![CDATA[ ]]>
+                        </label>
+            <type>textWithIcon</type>
+            <coValue>CustomerPersonLifestyleDetails</coValue>
+            <defaultValue>-</defaultValue>
+            <defaultKey>lfstylId.lfstylTyp</defaultKey>
+            <defaultKeyValue>Movie Maniac</defaultKeyValue>
+            <getStrategy>getOne_lfstylId_lfstylTyp[Movie Maniac]</getStrategy>
+            <coFieldValues>lfstylVal_lfstylId_lfstylTyp_lfstylTypDesc</coFieldValues>
+            <concatenateWith>_</concatenateWith>
+            <filterAs/>
+          </field>
+        </section>
+      </indicators>
+      <contacts>
+        <address>
+          <coValue>CustomerPersonPostalAddr</coValue>
+        </address>
+        <phone>
+          <coValue>CustomerPersonPhone</coValue>
+        </phone>
+        <email>
+          <coValue>CustomerPersonElectronicAddress</coValue>
+        </email>
+      </contacts>
+    </b2c>
+  </widgets>
+</contour>

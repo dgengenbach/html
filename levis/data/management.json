@@ -1,0 +1,440 @@
+{
+	"item": [{
+			"rowidObject": "3510102",
+			"fullNm": "AKSANA TYSBRUK",
+			"etrnc_addr": "atsybruk@levi.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510139",
+			"fullNm": "ESTERA WIECLAWSKA",
+			"etrnc_addr": "ewieclawska@levi.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510151",
+			"fullNm": "ISTVAN SKIBA",
+			"etrnc_addr": "iskiba@levi.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510160",
+			"fullNm": "KAMILA NIEDBAL",
+			"etrnc_addr": "kniedbal@levi.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510188",
+			"fullNm": "MARYENA WIELECHOWSKA",
+			"etrnc_addr": "mwielechowska@levi.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510197",
+			"fullNm": "MWIELECHOWSKA@LEVI.C",
+			"etrnc_addr": "PTAK",
+			"rle1": "District Manager"
+		}, {
+			"rowidObject": "3510203",
+			"etrnc_addr": "PBRATEK@LEVI.com",
+			"fullNm": "Freesport leisure, s.r",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510204",
+			"fullNm": "PIOTR BRATEK",
+			"etrnc_addr": "PBRATEK@LEVI.com",
+			"rle1": "District Manager"
+		},
+		{
+			"rowidObject": "3510095",
+			"fullNm": "ADRIAN GORSKI",
+			"etrnc_addr": "kierownik.outlet@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510096",
+			"fullNm": "AGATA BLASZCZYSYN",
+			"etrnc_addr": "ablaszczyszyn@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510097",
+			"fullNm": "AGATA SLOWIKOWSKA",
+			"etrnc_addr": "aslowikowska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510098",
+			"fullNm": "AGNIESZKA BIALY",
+			"etrnc_addr": "levis.sfera@interia.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510099",
+			"fullNm": "AKOS ALMASI",
+			"etrnc_addr": "aalmasi@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510100",
+			"fullNm": "AKOS KERTESZ",
+			"etrnc_addr": "gardenerjeans.kft@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510103",
+			"fullNm": "ALBIN MIERZYNSKI",
+			"etrnc_addr": "levisgalaxyszczecin@wp.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510104",
+			"fullNm": "ALBIN MIERZY_SKI",
+			"etrnc_addr": "leviskaskadaszczecin@wp.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510106",
+			"fullNm": "ANASTASIYA KOTOVSKAYA",
+			"etrnc_addr": "akotovskaya@ultrajeans.com.ua",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510107",
+			"fullNm": "ANDREA FARKAS",
+			"etrnc_addr": "forumlevis@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510108",
+			"fullNm": "ANNA ARENDARCZYK",
+			"etrnc_addr": "c.sklep@jeansstore.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510108",
+			"fullNm": "ANNA ARENDARCZYK",
+			"etrnc_addr": "c.sklep@jeansstore.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510109",
+			"fullNm": "ANNA JAKUBCZYK",
+			"etrnc_addr": "ajakubczyk@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510110",
+			"fullNm": "ANNA TUCHOLSKA",
+			"etrnc_addr": "kierownik.baltycka@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510114",
+			"fullNm": "ARTUR KAMINSKI",
+			"etrnc_addr": "akaminski@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510116",
+			"fullNm": "BARCZI ATTILA ",
+			"etrnc_addr": "westend.levis@netroller.hu",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510123",
+			"fullNm": "DANIEL TWARDOWSKI",
+			"etrnc_addr": "dtwardowski@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510124",
+			"fullNm": "DANUTA PATUSZYNSKA",
+			"etrnc_addr": "dpatuszynska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510126",
+			"fullNm": "DAWID WO_NIAK",
+			"etrnc_addr": "kierownik.zielonearkady@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510130",
+			"fullNm": "DOROTHEA KANTZIOTI",
+			"etrnc_addr": "levi27@otenet.gr",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510137",
+			"fullNm": "ELA ZAB_OTNA",
+			"etrnc_addr": "warminska@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510138",
+			"fullNm": "EMILIA KOWALEWSKA",
+			"etrnc_addr": "kierownik.copernicus@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510141",
+			"fullNm": "EWELINA RADOMSKA",
+			"etrnc_addr": "eradomska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510146",
+			"fullNm": "FUCHS NORBERT",
+			"etrnc_addr": "mammut.levis@invitel.hu",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510148",
+			"fullNm": "GINTARAS CEICYS",
+			"etrnc_addr": "pjurioo@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510150",
+			"fullNm": "IMRE GALAMBOS",
+			"etrnc_addr": "igalambos@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510152",
+			"fullNm": "IVAN PRUSS",
+			"etrnc_addr": "ipruss@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510153",
+			"fullNm": "IWONA BOGUSZ",
+			"etrnc_addr": "bs9alfa@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510154",
+			"fullNm": "IWONA MUSZYNSKA",
+			"etrnc_addr": "a.sklep@jeansstore.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510155",
+			"fullNm": "IZABELA PRZEPIײKA",
+			"etrnc_addr": "iprzepiorka@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510156",
+			"fullNm": "IZABELA ST_PIE_",
+			"etrnc_addr": "levis.lublin@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510157",
+			"fullNm": "JAN MRSTIK",
+			"etrnc_addr": "vedouci.brno@levistore.cz",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510158",
+			"fullNm": "JUDIT RONYECZ",
+			"etrnc_addr": "arkadlevis@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510159",
+			"fullNm": "KAMIL KOWALSKI",
+			"etrnc_addr": "kierownik.manufaktura@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510162",
+			"fullNm": "KAROLINA BULA",
+			"etrnc_addr": "kierownik.arkadia@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510163",
+			"fullNm": "KAROLINA BU_A",
+			"etrnc_addr": "kierownik.arkadia@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510164",
+			"fullNm": "KAROLINA PARULSKA",
+			"etrnc_addr": "levisoutletszczecin@wp.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510166",
+			"fullNm": "KATARZYNA GORCZEWSKA",
+			"etrnc_addr": "kgorczewska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510169",
+			"fullNm": "KINGA MOTEK",
+			"etrnc_addr": "a.sklep@jeansstore.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510170",
+			"fullNm": "KLAUDIA CZAPLEWSKA",
+			"etrnc_addr": "kczaplewska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510173",
+			"fullNm": "KRYSTYNA GLOWACKA",
+			"etrnc_addr": "d.sklep@jeanssport.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510174",
+			"fullNm": "KRYSTYNA G_OWACKA",
+			"etrnc_addr": "d.sklep@jeansstore.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510176",
+			"fullNm": "LUCIE KLINEROVǇLKINER",
+			"etrnc_addr": "PIOTR BRATEK",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510179",
+			"fullNm": "MAGDA NAWROTEK",
+			"etrnc_addr": "levismarcelin@wp.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510180",
+			"fullNm": "MAGDALENA GORSKA",
+			"etrnc_addr": "fokrakow@gmail.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510181",
+			"fullNm": "MAGDALENA HORNA",
+			"etrnc_addr": "mhorna@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510182",
+			"fullNm": "MALGORZATA KACZMAREK",
+			"etrnc_addr": "kierownik.forum@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510184",
+			"fullNm": "MARCIN WAL",
+			"etrnc_addr": "mwal@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510187",
+			"fullNm": "MARIA MITRAKA",
+			"etrnc_addr": "levipyl@otenet.gr",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510196",
+			"fullNm": "MICHA_ TAFIL",
+			"etrnc_addr": "kierownik.riviera@fhkdm.pl",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510198",
+			"fullNm": "NATALIA HYPKA",
+			"etrnc_addr": "nhypka@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510200",
+			"fullNm": "OUTLET.PTAK@FHKDM.PL",
+			"etrnc_addr": "Marzena Wielechowska",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510201",
+			"fullNm": "PATRIC TALAFANT",
+			"etrnc_addr": "ptalafant@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510202",
+			"fullNm": "PATRIK HERZOG",
+			"etrnc_addr": "pherzog@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510205",
+			"fullNm": "PRIIT JURIOO",
+			"etrnc_addr": "pjurioo@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510220",
+			"fullNm": "SZYMON SEKOWSKI",
+			"etrnc_addr": "ssekowski@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510221",
+			"fullNm": "SǮDOR GY_RI",
+			"etrnc_addr": "sgyori@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510223",
+			"fullNm": "TADEAS FIALA",
+			"etrnc_addr": "tfiala@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510224",
+			"fullNm": "TATIANA JEGOROVA",
+			"etrnc_addr": "pjurioo@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510225",
+			"fullNm": "TATYANA JIZDAN",
+			"etrnc_addr": "tjazdan@ardon.md",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510227",
+			"fullNm": "TEREZA CHINALSKA",
+			"etrnc_addr": "tchinalska@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510237",
+			"fullNm": "VIKTORIA VIDA",
+			"etrnc_addr": "vvida@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510238",
+			"fullNm": "YAROSLAVA PRUSS",
+			"etrnc_addr": "yprus@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510239",
+			"fullNm": "ZOLTAN BANDA",
+			"etrnc_addr": "zbanda@levi.com",
+			"rle1": "Manager"
+		},
+		{
+			"rowidObject": "3510240",
+			"fullNm": "ÖA BERDE",
+			"etrnc_addr": "eberde@levi.com",
+			"rle1": "Manager"
+		}
+	]
+}

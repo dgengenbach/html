@@ -1,0 +1,14 @@
+.other-link {	
+	text-decoration: none;	
+	text-transform: none !important;
+	color: #333;
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	font-family: "Interstate Bold";
+	background-repeat: no-repeat;
+	background-position: left center;
+	position: relative;
+	z-index: 999;
+	line-height: 26px;
+}

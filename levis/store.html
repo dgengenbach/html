@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Levi's Store Manager</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+		<link href="https://assets.levi.com/css/fonts.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="https://assets.levi.com/css/styles.css?v=f049fba4e4fda8f43da88dbb61ece69a" media="screen" rel="stylesheet" type="text/css">
+		<link href="https://assets.levi.com/css/custom.css?v=cc4a8477c8d5f0004bf10a9de2fb44a2" media="screen" rel="stylesheet" type="text/css">
+		<link href="css/custom.css" rel="stylesheet" />
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Levi's Store Manager</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            >
+            <!-- Navbar-->
+            <ul class="float-right navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="https://levi.com">Corporate</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Tools</div>
+                            <a class="nav-link" id="slink" href="index.html"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-hotel"></i></div>
+                                Stores
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <a class="nav-link" id="qlink" href="queries.html?"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                                Queries</a
+                            ><a class="nav-link" id="tlink" href="tasks.html?"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                                Tasks <span class="badge badge-warning" style="margin-left:20px;" id="taskCount">0</span></a
+                            >
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        <div id="loggedInAs">
+							District Manager
+						</div>
+						<div class="float-right">
+							<img id="personImg" style="max-width:75%"/>
+						</div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+					<div id="loader" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: 0 auto;z-index: 9999;background-color: #CCC;opacity: .5;">
+						<img src="images/loading.gif" style="position: relative;top: 35%;left: 48%;">
+					</div>
+					<input type="hidden" id="storeData" />
+                    <div class="container-fluid">
+						<div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header"><i class="fas fa-table mr-1"></i> Store Details</div>
+                                    <div class="card-body">
+										<div class="row">
+											<div class="location-details col-sm-11">
+												<div class="col-12 relative">
+													<div class="address">
+														<header>
+															<span class="ga-link" id="fullNm"></span>
+															<span class="store-type" id="storeType" style="background-color: #333333 !important;"></span>
+														</header>
+														<span id="addrLn1"></span>
+														<span id="addrLn2"></span>
+														<span id="csz"></span>
+													</div>
+													<div class="open-status hours-opening status-primary-697589 open is-closed has-no-hours">Store Status:</div>
+													<div class="row">	
+														<div class="col-sm-12">
+															<a href="#" class="other-link ga-link" id="phnNum"></a>
+														</div>
+													</div>
+													<div class="row">	
+														<div class="col-sm-12">
+															<a href="#" class="other-link ga-link" id="etrncAddr"></a>
+														</div>
+													</div>
+													<div class="location-custom-message"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="hours-wrap">
+													<div class="hours hours-tab-content active">
+														<div class="pull-right">
+															<a href="#" class="other-link" onclick="$.fn.editHours();"><i class="fas fa-edit"></i>Edit Hours</a>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Monday">Mon <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="monHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Tuesday">Tue <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="tueHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Wednesday">Wed <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="wedHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row active">
+															<span class="daypart" data-daypart="Thursday">Thu <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="thuHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Friday">Fri <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="friHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Saturday">Sat <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="satHrs">08:00-18:00</dspaniv>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														<div class="day-hour-row">
+															<span class="daypart" data-daypart="Sunday">Sun <span class="override" style="display:none">Holiday Hours</span>
+															</span>
+															<span class="time">
+																	<span id="sunHrs">08:00-18:00</span>
+															</span>
+															<div class="clearfix"></div>
+														</div>
+														
+													</div>
+													<div id="hoursAlert"></div>
+												</div>
+
+											</div>
+										</div>	
+									</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+								<div class="row">
+									<div class="col-xl-6">
+										<div class="card mb-4">
+											<div class="card-header" id="attrsCardHeader"><i class="fas fa-chart-bar mr-1"></i>Store Attributes</div>
+											<div class="card-body">
+												<div id="attrs">
+												</div>
+												<!--button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												<div class="float-right"u>
+													<button type="button" class="btn btn-primary" onclick="$.fn.updateAttrs();">Update</button>
+												</div-->
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+									
+										<div class="card mb-4">
+											<div class="card-header" id="attrsCardHeader"><i class="fas fa-camera mr-1"></i>Store Image</div>
+											<div class="card-body">
+												<div id="img">
+													<img id="imgUrl" style="max-width:100%" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card mb-4">
+                                    <div class="card-header" ><i class="fas fa-chart-area mr-1"></i>MDM REST Call Log</div>
+                                    <div class="card-body" id="log"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+				</main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">© 2020 LEVI STRAUSS & CO.</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="hoursModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Edit Store Hours</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<form class="form" id="hoursForm">
+					<div class="form-row" style="padding-bottom:5px;">
+						<div class="col"><h5>Day</h5></div>
+						<div class="col"><h5>Open</h5></div>
+						<div class="col"><h5>Close</h5></div>
+						<div class="col"><h5>Closed</h5></div>
+					</div>
+				  
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="$.fn.updateHours();">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- modal -->
+		
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				$.fn.loadUser();
+				$.fn.loadStore();
+				$.fn.loadStoreAttrs();
+				$.fn.loadTasks(true);
+			});
+		</script>
+    </body>
+</html>
