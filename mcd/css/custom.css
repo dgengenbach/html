@@ -1,0 +1,103 @@
+.other-link {	
+	text-decoration: none;	
+	text-transform: none !important;
+	color: #333;
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	font-family: "Interstate Bold";
+	background-repeat: no-repeat;
+	background-position: left center;
+	position: relative;
+	z-index: 999;
+	line-height: 26px;
+}
+
+.bg-dark {
+    background-color: #DA291C !important;
+}
+.sb-sidenav-dark .sb-sidenav-footer {
+    background-color: #DA291C;
+}
+.mcd-yellow {
+	color: #FFC72C;
+	background-color: #FFC72C;
+}
+.mcd-red {
+	background-color: #DA291C;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #DA291C;
+    border-color: #DA291C;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #FFC72C;
+  border-color: #FFC72C;
+}
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #DA291C;
+  border-color: #FFC72C;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.hierarchy .hierarchy-tree-panel, .hierarchy-task-view .hierarchy-tree-panel {
+    margin-top: 15px;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+.mdm-tree-container .mdm-tree-node-line {
+    height: 40px;
+    border: 1px solid;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor;
+    border-color: #fff #fff #ddd;
+    white-space: nowrap;
+    min-width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.mdm-tree-container .mdm-tree-node {
+    max-height: 40px;
+}
+
+.mdm-tree-container .mdm-tree-node-line .indicator-icon {
+    position: absolute;
+    left: 5px;
+    display: inline-block;
+}
+.mdm-tree-container .mdm-tree-level-offset {
+    display: inline-block;
+    width: 24px;
+    height: 40px;
+    vertical-align: middle;
+}
+.mdm-tree-container .mdm-node-expand-place {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.hierarchy .hierarchy-tree-node-image-area, .hierarchy-task-view .hierarchy-tree-node-image-area {
+    display: inline-block;
+    padding: 3px 0;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+.hierarchy .hierarchy-tree-node-image, .hierarchy-task-view .hierarchy-tree-node-image {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    margin-bottom: 7px;
+}
