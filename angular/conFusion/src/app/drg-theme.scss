@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$drg-theme-primary: mat-palette(mat-deep-orange);
+$drg-theme-accent: mat-palette(mat-orange);
+$drg-app-theme:   mat-light-theme($drg-theme-primary, $drg-theme-accent);
+
+@include angular-material-theme($drg-app-theme);
